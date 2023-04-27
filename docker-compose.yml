@@ -1,0 +1,11 @@
+version: '3'
+services:
+  hn-server-admin:
+    build: .
+    image: normal-api-lsp
+    restart: always
+    ports:
+      - "9999:8080"
+    environment:
+      - TZ:=Asia/Shanghai
+      - privileged=true
