@@ -30,6 +30,7 @@
     </dependencies>
 
     <build>
+        <finalName>api-tools</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
