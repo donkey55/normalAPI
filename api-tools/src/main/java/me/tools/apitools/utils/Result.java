@@ -12,19 +12,19 @@ public class Result implements Serializable {
 
     private String message;
 
-    private Map<String, Object> data;
+    private Map<String, Object> result;
 
     public static Result ok() {
         Result result = new Result();
         result.setCode(200);
         result.setMessage("success");
-        result.setData(new HashMap<>());
+        result.setResult(new HashMap<>());
         return result;
     }
 
     public static Result ok(Object data) {
         Result result = Result.ok();
-        result.data.put("data", data);
+        result.result.put("data", data);
         return result;
     }
 
@@ -36,7 +36,7 @@ public class Result implements Serializable {
     }
 
     public Result put(String key, Object data) {
-        this.data.put(key, data);
+        this.result.put(key, data);
         return this;
     }
 }
