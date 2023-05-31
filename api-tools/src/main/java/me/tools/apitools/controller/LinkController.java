@@ -29,7 +29,7 @@ public class LinkController {
         }
     }
 
-    @RequestMapping("/{shortLink}")
+    @RequestMapping("/link/{shortLink}")
     public void redirect(@PathVariable String shortLink, HttpServletResponse response) throws IOException {
         String originalLink = linkService.redirect(shortLink);
         if (originalLink != null) {

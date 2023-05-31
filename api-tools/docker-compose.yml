@@ -1,11 +1,12 @@
 version: '3'
 services:
-  hn-server-admin:
+  api-tools:
     build: .
-    image: normal-api-lsp
+    container_name: api-tools
+    image: api-tools
     restart: always
     ports:
-      - "9999:8080"
+      - "9999:8888"
     environment:
       - TZ:=Asia/Shanghai
       - privileged=true
